@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Inter, sans-serif; background: #f5f7fb; color: #17233b; }
+.app { display: flex; min-height: 100vh; }
+.sidebar { width: 245px; background: #101b33; color: #c4cce0; padding: 25px 16px; display: flex; flex-direction: column; flex-shrink: 0; }
+.brand { display: flex; align-items: center; gap: 11px; padding: 0 7px 32px; }
+.brand-icon { background: linear-gradient(135deg,#4f8cff,#7b61ff); border-radius: 12px; padding: 10px; color: white; }
+.brand h2 { color: white; font-size: 17px; margin: 0; }
+.brand h2 span { color: #77a6ff; }
+.brand small { display: block; font-size: 10px; margin-top: 5px; color: #8998b8; }
+.menu-label { font-size: 10px; letter-spacing: 1.5px; padding-left: 12px; color: #71809f; margin-bottom: 12px; }
+nav { display: grid; gap: 6px; }
+.menu-item { display: flex; align-items: center; gap: 13px; padding: 12px; border-radius: 9px; font-size: 13px; cursor: pointer; }
+.menu-item.active { background: #273b63; color: white; box-shadow: inset 3px 0 #6596ff; }
+.sidebar-bottom { margin-top: auto; display: flex; align-items: center; gap: 10px; background: #1c2a47; padding: 13px; border-radius: 10px; }
+.sidebar-bottom b, .sidebar-bottom small { display: block; font-size: 11px; }
+.sidebar-bottom small { color: #91a0bd; margin-top: 4px; }
+.status-dot { width: 8px; height: 8px; background: #44d6a0; border-radius: 50%; margin-left: auto; }
+.main { flex: 1; min-width: 0; }
+.topbar { height: 76px; background: white; border-bottom: 1px solid #e9edf5; display: flex; align-items: center; justify-content: flex-end; gap: 22px; padding: 0 30px; }
+.search { margin-right: auto; display: flex; align-items: center; gap: 10px; background: #f5f7fb; padding: 11px 14px; border-radius: 9px; width: 300px; color: #8390a8; }
+.search input { border: 0; outline: 0; background: transparent; width: 100%; font: inherit; font-size: 12px; }
+.bell { border: 0; background: white; color: #6d7b94; }
+.profile { display: flex; align-items: center; gap: 10px; }
+.avatar { background: #e8efff; color: #4275e8; border-radius: 50%; width: 36px; height: 36px; display: grid; place-items: center; font-weight: 700; }
+.profile b, .profile small { display: block; font-size: 12px; }
+.profile small { color: #8a96aa; font-size: 10px; margin-top: 4px; }
+.content { padding: 30px; max-width: 1500px; margin: auto; }
+.welcome { display: flex; justify-content: space-between; align-items: center; margin-bottom: 26px; }
+.eyebrow { color: #6388d8; font-size: 10px; font-weight: 700; letter-spacing: 1.5px; }
+.welcome h1 { font-size: 25px; margin: 7px 0; }
+.welcome p:not(.eyebrow) { color: #8a96aa; font-size: 12px; }
+.date-btn { display: flex; align-items: center; gap: 8px; padding: 11px 14px; background: white; border: 1px solid #e5eaf2; border-radius: 9px; color: #53627c; font-size: 12px; }
+.stats-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 17px; }
+.stat-card, .panel { background: white; border: 1px solid #edf0f6; border-radius: 13px; padding: 20px; box-shadow: 0 3px 12px #1d315008; }
+.stat-icon { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 11px; }
+.blue { background: #eaf1ff; color: #4b83ed; }
+.purple { background: #f0eaff; color: #8864e9; }
+.green { background: #e4f8f0; color: #27b885; }
+.orange { background: #fff1e5; color: #f09a4d; }
+.stat-card p { color: #8995aa; font-size: 12px; margin: 18px 0 8px; }
+.stat-bottom { display: flex; align-items: center; justify-content: space-between; }
+.stat-bottom h2 { font-size: 25px; margin: 0; }
+.stat-bottom span { display: flex; align-items: center; color: #8b99b0; font-size: 10px; }
+.section-heading { display: flex; align-items: center; justify-content: space-between; margin: 28px 0 15px; }
+.section-heading h2 { font-size: 17px; }
+.section-heading span { color: #8b99b0; font-size: 11px; }
+.overview-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 17px; }
+.panel-title { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+.panel-title h3 { font-size: 14px; margin: 0; }
+.panel-title button { border: 0; background: transparent; color: #5785e7; font-size: 11px; }
+.appointment { display: flex; align-items: center; gap: 10px; padding: 13px 0; border-top: 1px solid #f0f2f7; }
+.patient-avatar { background: #f0f4ff; color: #7193e8; padding: 9px; border-radius: 10px; }
+.patient-info { flex: 1; }
+.patient-info b, .patient-info small { display: block; font-size: 11px; }
+.patient-info small { color: #8b99b0; margin-top: 5px; font-size: 10px; }
+.appointment-time { font-size: 10px; color: #66758e; }
+.badge { font-size: 9px; padding: 6px 8px; border-radius: 6px; background: #fff4e4; color: #d78c30; }
+.badge.completed { background: #e5f8f0; color: #26a978; }
+.module { display: flex; align-items: center; gap: 11px; padding: 12px 0; border-top: 1px solid #f0f2f7; }
+.module-icon { padding: 9px; border-radius: 9px; }
+.module-icon svg { width: 18px; height: 18px; }
+.module b, .module small { display: block; font-size: 10px; }
+.module small { color: #8b99b0; margin-top: 5px; }
+.module-status { margin-left: auto; font-size: 9px; color: #4184e8; background: #edf4ff; padding: 6px; border-radius: 6px; white-space: nowrap; }
+.module-status.pending { color: #d68a35; background: #fff4e5; }
+.footer-note { display: flex; align-items: center; gap: 7px; justify-content: center; margin-top: 25px; color: #98a3b7; font-size: 10px; }
+
+@media (max-width: 1000px) {
+  .sidebar { width: 190px; }
+  .stats-grid { grid-template-columns: repeat(2,1fr); }
+  .overview-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 650px) {
+  .sidebar { width: 62px; padding: 15px 7px; }
+  .brand { padding: 0 0 25px; justify-content: center; }
+  .brand > div:last-child, .menu-label, .menu-item span, .sidebar-bottom div, .status-dot { display: none; }
+  .menu-item { justify-content: center; padding: 12px 5px; }
+  .sidebar-bottom { justify-content: center; padding: 10px 4px; }
+  .topbar { padding: 0 12px; gap: 10px; }
+  .search { width: auto; flex: 1; padding: 9px; }
+  .profile > div:last-child { display: none; }
+  .content { padding: 18px 12px; }
+  .welcome { align-items: flex-start; gap: 10px; flex-direction: column; }
+  .welcome h1 { font-size: 21px; }
+  .stats-grid { gap: 10px; }
+  .stat-card { padding: 14px; }
+  .stat-bottom h2 { font-size: 21px; }
+  .appointment { flex-wrap: wrap; }
+}
